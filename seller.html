@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <title>Seller's page</title>
+        <style>
+            body{
+                background-color: #001233;
+                color: #FF595A;
+            }
+            #header {
+                width: 100%;
+                height: 70px;
+                background-color: #FF595A;
+                position: fixed; 
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+            h3{
+                font-family: sans-serif;  
+                margin-left: 30px;
+                margin-bottom: 10px;
+            }
+            h4{
+                margin-left: 30px;
+                margin-bottom: 35px;
+            }
+            textarea{
+                width: 300px;
+                height: 50px;
+                font-size: x-large;
+                margin-bottom: 20px;
+                font-family: sans-serif;
+            }
+            form{
+                margin-top: 10px;
+                margin-left: 30px;
+            }
+            body{
+                height: 230vh;
+                overflow: scroll;
+                font-family: sans-serif;
+            }
+            #heading{
+                position: absolute;
+                top: 75px;
+                left: 40%;
+                font-family: sans-serif;  
+                
+            }
+            #big-rect{
+                width: 60%;
+                height: 1400px;
+                position: absolute;
+                top: 150px;
+                left: 300px;                
+                border: 2px solid #FF595A;
+            }
+            /* #sub-rect-1{
+                width: 100%;
+                height: 300px;
+                position: absolute;
+                border: 2px solid #4CAF50;
+            } */
+            #rectangle1 {
+                width: 100%;
+                height: 450px;
+                border-top: 2px solid #FF595A;
+                border-bottom: 2px solid #FF595A;
+            }
+
+            label {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 0;
+                display: block;
+            }
+            #productDescription{
+                width: 50%;
+                height: 180px;
+            }
+            /* price box css */
+            .input-container {
+                display: flex;
+                align-items: center;
+            }
+            .rupee-symbol {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+            .amount-input {
+                width: 50%;
+                padding: 10px;
+                font-size: 20px;
+                text-align: center;
+            }
+            /* price box css end */
+
+            /* contact box css */
+            #rectangle2 {
+                width: 100%;
+                height: 150px;
+                margin-top: 40px;
+                border-top: 2px solid #FF595A;
+                border-bottom: 2px solid #FF595A;
+            }            
+            .input-container {
+                display: flex;
+                align-items: center;
+            }
+            .contact-input {
+                margin-top: 15px;
+                width: 50%;
+                padding: 10px;
+                font-size: 20px;
+                text-align: center;
+            }
+            /* contact box css end  */
+
+            /* image upload wala css */
+            #upload-button-1{
+                width: 100px;                
+            }
+            #upload-button-2{
+                width: 100px;
+            }
+            .preview-image{
+                width: 150px;
+                height: 150px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            #preview-1{
+                margin-left: 300px;
+
+            }
+            .but {
+            border-radius: 9px;
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+            margin: 22px 20px;
+            color: #FF595A;
+            background-color: rgb(116, 111, 102);
+            position: relative;
+            left: 45%;
+            top:95%;
+        }
+            .mybut{
+                width: 100px;
+                margin-top: 380px;
+                margin-left: 400px;
+                color: #FF595A;
+            }
+           a{
+            text-decoration: none;
+            color: #FF595A;
+           }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div><h1 id="heading">POST YOU PRODUCT</h1></div>
+        <div id="big-rect">
+            <div id="sub-rect-1">
+                <h3>SELECTED CATEGORY:</h3>
+                <h4>Textbooks/Notebooks</h4>
+            </div>
+            <div id="rectangle1">
+                <h3>INCLUDE SOME DETAILS</h3>
+                <form>
+                    <label for="product-name">Product Name:</label><br>
+                    <textarea id="productName" name="product_name"></textarea>
+                    
+                    <label for="product-description">Product Description:</label><br>
+                    <textarea id="productDescription" name="product-description"></textarea>
+                </form>
+            </div>
+            <div id="priceBox">
+                <h3>SET A PRICE</h3>
+                <div class="input-container">
+                    <span class="rupee-symbol">₹</span>
+                    <input type="text" placeholder="Enter amount" pattern="[0-9]*" class="amount-input"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                </div>
+            </div>
+            <div id="rectangle2">
+                <h3>CONTACT DETAILS:</h3>
+                <div class="input-container">
+                    <input type="text" placeholder="Enter contact number" pattern="[0-9]*" class="contact-input"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                </div>                
+            </div>
+
+            <div>
+                <h3>UPLOAD IMAGES:</h3>
+                <div class="upload-container">
+                    <button id="upload-button-1" class="upload-button">Upload Image</button>
+                    <img id="preview-1" class="preview-image" style="display:none">
+                </div>
+                <div class="upload-container">
+                    <button id="upload-button-2" class="upload-button">Upload Image</button>
+                    <img id="preview-2" class="preview-image" style="display:none">
+                </div>                               
+            </div>
+            <button CLASS="mybut"><a href="product.html">SUBMIT</a></button>
+        </div>
+        <!-- <input class="but" type="submit"  value="Submit"> -->
+
+        <script>
+            // loop through the upload buttons
+            var uploadButtons = document.getElementsByClassName("upload-button");
+            for (var i = 0; i < uploadButtons.length; i++) {
+                var uploadButton = uploadButtons[i];
+                var previewImage = document.getElementById("preview-" + (i+1));
+                uploadButton.addEventListener("click", function() {
+                    var input = document.createElement("input");
+                    input.type = "file";
+                    input.click();
+                    input.onchange = function() {
+                        var file = input.files[0];
+                        var reader = new FileReader();
+                        reader.onloadend = function() {
+                            previewImage.src = reader.result;
+                            previewImage.style.display = "block";
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+            }
+           
+        </script>
+    </body>
+</html>
