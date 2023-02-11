@@ -33,7 +33,7 @@
             width: 50%;
             padding: 12px 20px;
             border: 1px solid blue;
-            margin: 5%;
+            margin: 2%;
             border-radius: 4px;
             font-size: 15px;
             margin-left: 30px;
@@ -69,6 +69,10 @@
     <form action ="index.html" name="myForm" onsubmit="return validateForm()" method="post" target="_blank">
         <div class="formdesign" id="name">
             Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="fname" placeholder="Name as per id card" required ><b><span class="formerror"> </span></b>
+        </div>
+       
+        <div class="formdesign" id="rollno">
+            Rollno: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="froll" placeholder="Rollno as per id card" required ><b><span class="formerror"> </span></b>
         </div>
 
         <div class="formdesign" id="email">
@@ -121,6 +125,11 @@ function validateForm(){
         seterror("name", "*Length of name is too short");
         returnval = false;
     }
+    var roll=document.forms['myForm']["froll"].value;
+    if (roll.length != 7){
+        seterror("rollno", "*Roll number should be of 7 digits!");
+        returnval = false;
+    }
     var email = document.forms['myForm']["femail"].value;
     if (email.length>25){
         seterror("email", "*Email length is too long");
@@ -132,7 +141,6 @@ function validateForm(){
     //     seterror("email", "*YOU ARE NOT ELLIGIBLE TO BECOME ADMIN");
     //     returnval=false
     // }
-
     var phone = document.forms['myForm']["fphone"].value;
     if (phone.length != 10){
         seterror("phone", "*Phone number should be of 10 digits!");
