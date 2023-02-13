@@ -7,7 +7,7 @@
   body {
     width: 100vw;
     min-height: 100vh;
-    background-color: #001233;
+    background-color: #ADD8E6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@
   .content h2 {
     display: block;
     font-size: 2rem;
-    color: #FF595A;
+    color: #2B547E;
     font-weight: 500;
     line-height: 2rem;
     letter-spacing: 1px;
@@ -112,7 +112,7 @@
   
   
   .container .box .imgBox .icons a:hover{
-    background:var(#FF595A);
-    color:#FF595A;
+    background:var(#2B547E);
+    color:#2B547E;
   }
   
