@@ -187,14 +187,14 @@
                 <h3>SET A PRICE</h3>
                 <div class="input-container">
                     <span class="rupee-symbol">₹</span>
-                    <input type="text" placeholder="Enter amount" pattern="[0-9]*" class="amount-input"
+                    <input type="text" placeholder="Enter amount" pattern="[0-9]*" class="amount-input" name="amount-input"
                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                 </div>
             </div>
             <div id="rectangle2">
                 <h3>CONTACT DETAILS:</h3>
                 <div class="input-container">
-                    <input type="text" placeholder="Enter contact number" pattern="[0-9]*" class="contact-input"
+                    <input type="text" placeholder="Enter contact number" pattern="[0-9]*" class="contact-input" name="contact-input"
                         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                 </div>                
             </div>
@@ -202,7 +202,7 @@
             <div>
                 <h3>UPLOAD IMAGES:</h3>
                 <div class="upload-container">
-                    <button id="upload-button-1" class="upload-button">Upload Image</button>
+                    <button id="upload-button-1" class="upload-button" name="upload-button">Upload Image</button>
                     <img id="preview-1" class="preview-image" style="display:none">
                 </div>
                 <div class="upload-container">
@@ -210,7 +210,7 @@
                     <img id="preview-2" class="preview-image" style="display:none">
                 </div>                               
             </div>
-            <button CLASS="mybut"><a href="product.html">SUBMIT</a></button>
+            <button CLASS="mybut" input="submit"><a href="product.html">SUBMIT</a></button>
         </div>
         <!-- <input class="but" type="submit"  value="Submit"> -->
 
